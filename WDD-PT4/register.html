@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<!--=== Coding by CodingLab | www.codinglabweb.com === -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="register/style.css">
+     
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <title>Residents Registration Form </title>
+    <link href="img/logo.png" rel="shortcut icon">
+</head>
+<body style="background-image: url(img/arc.jpg); background-size: cover;">
+    <div class="container">
+        <header>Brgy. Makiling Resident Registration</header>
+        <form action="register.php" method="post" style="overflow-y: scroll;">
+            <div class="form first">
+                <div class="details personal">
+                    <span class="title">Personal Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>First Name</label>
+                            <input type="text" name="firstname" placeholder="Enter your first name" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Middle Name</label>
+                            <input type="text" name="middlename" placeholder="Enter your middle name">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Last Name</label>
+                            <input type="text" name="lastname" placeholder="Enter your last name" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Suffix</label>
+                            <input type="text" name="suffix" placeholder="Sr./Jr.">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Date of Birth</label>
+                            <input type="date" name="birthdate" placeholder="Enter birth date" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Place of Birth</label>
+                            <input type="text" name="birthplace" placeholder="Enter birth place" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Gender</label>
+                            <select name="gender" required>
+                                <option disabled selected>Select gender</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Nationality</label>
+                            <input type="text" name="nationality" placeholder="Enter nationality" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Civil Status</label>
+                            <select name="civilstatus" required>
+                                <option disabled selected>Select status</option>
+                                <option>Single</option>
+                                <option>Married</option>
+                                <option>Separated</option>
+                                <option>Widowed</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Occupation</label>
+                            <input type="text" name="occupation" placeholder="Enter your occupation" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Phone Number</label>
+                            <input type="number" name="phonenum" placeholder="Enter phone number" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Display Picture</label>
+                            <input type="file" name="picture" placeholder="Enter your display picture" onchange="readURL(this)" accept="image" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Email</label>
+                            <input type="email" name="email" placeholder="Enter your email" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Password</label>
+                            <input type="password" name="password" placeholder="Enter your password" required>
+                        </div>
+
+                        <div class="input-field"></div>
+
+                    </div>
+
+                    <div class="buttons">
+                        <div class="backBtn">
+                            <i class="uil uil-navigator"></i>
+                            <span class="btnText"><a href="login.html" style="color: #fff;">Back to Login</a></span>
+                        </div>
+                    
+                        <button class="nextBtn">
+                            <span class="btnText">Next</span>
+                            <i class="uil uil-navigator"></i>
+                        </button>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+
+            <div class="form second">
+                <div class="details address">
+                    <span class="title">Address Details</span>
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>House Number</label>
+                            <input type="number" name="housenum" placeholder="Enter house number" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Street/Purok</label>
+                            <input type="text" name="streetPurok" placeholder="Enter street/purok" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Resident Since</label>
+                            <input type="number" name="since" placeholder="Enter year" required>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="details address">
+                    <span class="title">Barangay Details</span>
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>PWD?</label>
+                            <select name="pwd" required>
+                                <option disabled selected>Select option</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Senior Citizen?</label>
+                            <select name="senior" required>
+                                <option disabled selected>Select option</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Voter Status</label>
+                            <select name="voterstatus" required>
+                                <option disabled selected>Select status</option>
+                                <option>Active</option>
+                                <option>Inactive</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Valid ID Type</label>
+                            <input type="text" name="validIdType" placeholder="Select image" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Valid ID</label>
+                            <input type="file" name="validId" placeholder="Select image" required>
+                        </div>
+
+                        <div class="input-field"></div>
+                
+                    </div>
+                </div>
+
+                <div class="details emergency">
+                    <span class="title">Emergency Details</span>
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Contact Person</label>
+                            <input type="text" name="contactPerson" placeholder="Enter contact person" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Relationship</label>
+                            <input type="text" name="relationship" placeholder="Enter relationship" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Address</label>
+                            <input type="text" name="address" placeholder="Enter address" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Contact Number</label>
+                            <input type="number" name="contactnum" placeholder="Enter contact number" required>
+                        </div>
+
+                    </div>
+                </div> 
+                <div class="buttons">
+                    <div class="backBtn">
+                        <span class="btnText">Back</span>
+                        <i class="uil uil-navigator"></i>
+                    </div>
+                
+                    <button class="sumbit" name="submit">
+                        <span class="btnText">Submit</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+                </div>
+            </div>
+            <!--
+            <div class="form third">
+                <div class="details ID">
+                    <span class="title">Identity Details</span>
+                
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>ID Type</label>
+                            <input type="text" placeholder="Enter ID type" required>
+                        </div>
+                
+                        <div class="input-field">
+                            <label>ID Number</label>
+                            <input type="number" placeholder="Enter ID number" required>
+                        </div>
+                
+                        <div class="input-field">
+                            <label>Issued Authority</label>
+                            <input type="text" placeholder="Enter issued authority" required>
+                        </div>
+                
+                        <div class="input-field">
+                            <label>Issued State</label>
+                            <input type="text" placeholder="Enter issued state" required>
+                        </div>
+                
+                        <div class="input-field">
+                            <label>Issued Date</label>
+                            <input type="date" placeholder="Enter your issued date" required>
+                        </div>
+                
+                        <div class="input-field">
+                            <label>Expiry Date</label>
+                            <input type="date" placeholder="Enter expiry date" required>
+                        </div>
+                    </div>
+
+                    <div class="buttons">
+                        <div class="backBtn">
+                            <i class="uil uil-navigator"></i>
+                            <span class="btnText">Back</span>
+                        </div>
+                    
+                        <button class="sumbit">
+                            <span class="btnText">Submit</span>
+                            <i class="uil uil-navigator"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>-->
+        </form>
+    </div>
+
+    <script src="register/script.js"></script>
+</body>
+</html>
